@@ -82,7 +82,8 @@ class _ReadPageState extends State<_ReadPage> {
                         child: Text(
                           "${snapshot.data!.personId}",
                           style: TextStyle(fontSize: 20),
-                        )),
+                        )
+                    ),
                   ],
                 ),
                 Row(
