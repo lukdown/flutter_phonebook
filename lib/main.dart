@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'list.dart';
 import 'read.dart';
 
 void main() {
@@ -17,9 +18,10 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
 
-      initialRoute: "/read",
+      initialRoute: "/list",
       routes: { // map
         '/read': (context) => ReadPage(), // 기본 홈 페이지
+        '/list': (context) => ListPage(), // 기본 홈 페이지
 
       },
 

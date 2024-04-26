@@ -5,6 +5,7 @@ import 'personVo.dart';
 class ReadPage extends StatelessWidget {
   const ReadPage({super.key});
 
+  // 기본레이아웃
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,6 +30,9 @@ class _ReadPage extends StatefulWidget {
 
 // 할일 정의 클래스(통신, 데이터적용)
 class _ReadPageState extends State<_ReadPage> {
+
+
+
   // 변수
   late Future<PersonVo> personVoFuture;
 
@@ -175,7 +179,7 @@ class _ReadPageState extends State<_ReadPage> {
 
       // 서버 요청
       final response = await dio.get(
-        'http://localhost:9003/api/phonebooks/modify/1',
+        'http://localhost:9003/api/phonebooks/modify/2',
       );
 
       /*----응답처리-------------------*/
