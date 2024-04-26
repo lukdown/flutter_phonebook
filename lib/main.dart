@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'list.dart';
 import 'read.dart';
+import 'writeform.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +22,8 @@ class MyApp extends StatelessWidget {
       initialRoute: "/list",
       routes: { // map
         '/read': (context) => ReadPage(), // 기본 홈 페이지
-        '/list': (context) => ListPage(), // 기본 홈 페이지
+        '/list': (context) => ListPage(),
+        '/write': (context) => WriteForm(),
 
       },
 

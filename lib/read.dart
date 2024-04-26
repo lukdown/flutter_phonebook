@@ -31,6 +31,9 @@ class _ReadPage extends StatefulWidget {
 // 할일 정의 클래스(통신, 데이터적용)
 class _ReadPageState extends State<_ReadPage> {
 
+  // 라우터
+  late final args = ModalRoute.of(context)!.settings.arguments as Map;
+
 
 
   // 변수
@@ -41,16 +44,29 @@ class _ReadPageState extends State<_ReadPage> {
   void initState() {
     super.initState();
 
-    // 추가코드   // 데이터 불러괴 메소드 호출
-    print("initState(): 데이터 가져오기 전");
-    personVoFuture = getPersonByNo();
-    print("initState(): 데이터 가져오기 후");
+
   }
 
   // 화면그리기
   @override
   Widget build(BuildContext context) {
+
+    // ModalRoute를 통해 현재 페이지에 전달된 arguments를 가져옵니다.
+    final args = ModalRoute.of(context)!.settings.arguments as Map;
+
+    // 'personId' 키를 사용하여 값을 추출합니다.
+    final personId = args['personId'];
+    // 추가코드   // 데이터 불러괴 메소드 호출
+    print("initState(): 데이터 가져오기 전");
+    personVoFuture = getPersonByNo(personId);
+    print("initState(): 데이터 가져오기 후");
+
+    print("================================");
+    print(personId);
+    print("================================");
+
     print("Build(): 그리기 작업");
+
     return FutureBuilder(
       future: personVoFuture, //Future<> 함수명, 으로 받은 데이타
       builder: (context, snapshot) {
@@ -167,7 +183,8 @@ class _ReadPageState extends State<_ReadPage> {
   }
 
   // 3번(정우성) 데이터 가져오기 return    그림x
-  Future<PersonVo> getPersonByNo() async {
+  Future<PersonVo> getPersonByNo(int pId) async {
+    print(pId);
     print("initState(): 데이터 가져오기 중");
     try {
       /*----요청처리-------------------*/
@@ -179,7 +196,7 @@ class _ReadPageState extends State<_ReadPage> {
 
       // 서버 요청
       final response = await dio.get(
-        'http://localhost:9003/api/phonebooks/modify/2',
+        'http://localhost:9003/api/phonebooks/modify/${pId}',
       );
 
       /*----응답처리-------------------*/

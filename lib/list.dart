@@ -14,7 +14,13 @@ class ListPage extends StatelessWidget {
             padding: EdgeInsets.all(15),
             color: Color(0xffd6d6d6),
             child: _ListPage()
-        )
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: (){
+            Navigator.pushNamed( context, '/write', );
+          },
+          child: Icon(Icons.add),
+        ),
     );
   }
 }
@@ -96,7 +102,9 @@ class _ListPageState extends State<_ListPage> {
                     child: IconButton
                       (
                         onPressed: () {
+
                           print("page이동");
+
                           Navigator.pushNamed(
                               context,
                               "/read",
