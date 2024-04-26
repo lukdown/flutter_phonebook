@@ -134,5 +134,5 @@ class _WriteFormState extends State<_WriteForm> {
       //예외 발생
       throw Exception('Failed to load person: $e');
     }
-  } //getPersonList()
+  } //writePerson()
 }

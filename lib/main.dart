@@ -24,6 +24,7 @@ class MyApp extends StatelessWidget {
         '/read': (context) => ReadPage(), // 기본 홈 페이지
         '/list': (context) => ListPage(),
         '/write': (context) => WriteForm(),
+        '/modify': (context) => WriteForm(),
 
       },
 
