@@ -54,6 +54,8 @@ class _WriteFormState extends State<_WriteForm> {
                   labelText: '이름',
                   hintText: '이름을 입력하세요',
                   border: OutlineInputBorder(),
+
+
                 )
               ),
             ),

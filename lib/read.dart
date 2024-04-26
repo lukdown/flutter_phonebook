@@ -186,7 +186,10 @@ class _ReadPageState extends State<_ReadPage> {
                               print("데이터전송");
                               Navigator.pushNamed(
                                 context,
-                                "/list",
+                                "/modify",
+                                arguments: {
+                                  "personId": snapshot.data!.personId
+                                },
                               );
                             },
                             child: Text("수정")),
@@ -290,5 +293,6 @@ class _ReadPageState extends State<_ReadPage> {
       //예외 발생
       throw Exception('Failed to load person: $e');
     }
-  } //writePerson()
+  } //deletePerson()
+
 }

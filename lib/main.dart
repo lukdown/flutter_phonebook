@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'list.dart';
+import 'modifyform.dart';
 import 'read.dart';
 import 'writeform.dart';
 
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         '/read': (context) => ReadPage(), // 기본 홈 페이지
         '/list': (context) => ListPage(),
         '/write': (context) => WriteForm(),
-        '/modify': (context) => WriteForm(),
+        '/modify': (context) => ModifyForm(),
 
       },
 
