@@ -210,7 +210,6 @@ class _ModifyFormState extends State<_ModifyForm> {
         } // 데이터가있으면
       },
     );
-    ;
   }
 
   // 1명 데이터 가져오기 return    그림x

@@ -218,7 +218,6 @@ class _ReadPageState extends State<_ReadPage> {
         } // 데이터가있으면
       },
     );
-    ;
   }
 
   // 3번(정우성) 데이터 가져오기 return    그림x
